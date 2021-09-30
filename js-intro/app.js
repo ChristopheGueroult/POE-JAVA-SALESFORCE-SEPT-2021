@@ -15,3 +15,7 @@ console.log(firstName)
 //Typage dynamique
 let age = 67
 age = '89'
+
+//Constantes : Ces valeurs ne peuvent pas être modifiées
+const accelerationPesanteur = 9.8
+const pays = 'France'
