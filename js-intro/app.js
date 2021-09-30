@@ -23,12 +23,12 @@ const pays = 'France'
 //Type de données
 //String
 const lastName = 'Jonathan'
-const firstName = 'Jean'
-const fullName = lastName + ' ' + firstName
+const firstname = 'Jean'
+const fullName = lastName + ' ' + firstname
 const fullName2 = `${lastName} ${firstName}`
 
 //Number
-const age = 67
+const age2 = 67
 const ageDeMonPere = 12
 const ageDeMaMere = 9
 const sommeDesAges = ageDeMonPere + ageDeMaMere
@@ -39,3 +39,19 @@ let somme = nombre + nombre2
 
 //Boolean
 const isMarried = true
+
+// Prompter l'utilisateur
+const prenom = prompt('Quel est votre prénom ?')
+const nomDeFamille = prompt('Quel est votre nom de famille ?')
+const monAge = prompt('Quel est votre age ?')
+
+//Vous êtes Jean Blabla, et vous avez 45 ans
+alert(
+    'Vous etes ' +
+        prenom +
+        ' ' +
+        nomDeFamille +
+        ', et vous  avez ' +
+        monAge +
+        ' ans'
+)
