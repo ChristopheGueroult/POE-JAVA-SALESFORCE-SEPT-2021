@@ -55,3 +55,5 @@ alert(
         monAge +
         ' ans'
 )
+
+//Operateur logiques
