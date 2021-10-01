@@ -19,3 +19,9 @@ a = b++
 //b +=1
 //a=b
 a = ++b
+
+//Boucle sur des chaines
+const noms = 'Christian Lisangola'
+for (let i = 0; i < noms.length; i++) {
+    console.log(noms[i])
+}
