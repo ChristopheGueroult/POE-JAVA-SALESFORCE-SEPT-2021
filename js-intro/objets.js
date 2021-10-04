@@ -9,7 +9,15 @@ const article = {
     },
 }
 
+console.log('===Sans Destructuration===')
 console.log(`Designation : ${article.designation}`)
 console.log(`Ref : ${article.reference}`)
 console.log(`Prix HT : ${article.prixHT}€`)
 console.log(`Prix TTC : ${article.calculerPrixTTC()}€`)
+
+// Destructuration
+console.log('===Destructuration===')
+const { designation, reference, prixHT } = article
+console.log(`Designation : ${designation}`)
+console.log(`Ref : ${reference}`)
+console.log(`Prix HT : ${prixHT}€`)
