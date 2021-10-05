@@ -19,13 +19,14 @@ for (let i = 0; i < para.length; i++) {
 }
 
 //Mettre en rouge tous les élements impairs de la liste des technos
-//On fait une boucle, parce que les propriétés n'existe par sur la collection, mais sur l'objet
+
 for (let i = 0; i < liste.length; i = i + 2) {
     liste[i].style.color = 'red'
     // liste[i].style.
 }
 
-//Accéder à une occurence.Contrairement à querySeletorAll() ici, on accède directement à l'objet et non la collection
+//Accéder à une occurence
+
 const p = document.querySelector('p')
 p.innerText = 'Je suis dans une joie immence'
 
@@ -35,6 +36,26 @@ const technos = document.querySelector('#technos')
 technos.innerHTML += '<li>Papapapa</li>'
 // console.log(technos.innerHTML);
 
-// Ajouter une balise avant les autres dans la liste
+// Ajouter Kubernetes
 const devops = document.querySelector('#devops')
 devops.innerHTML = '<li>Kubernetes</li>' + devops.innerHTML
+
+//Création d'un noeud dans le DOM
+const typescript = document.createElement('li')
+typescript.innerText = 'Typescript'
+
+const dart = document.createElement('li')
+dart.innerText = 'Dart'
+
+//Ajouter un enfant
+technos.appendChild(typescript)
+technos.appendChild(dart)
+
+//Ajouter plusieurs enfants
+const tests = document.createElement('li')
+tests.innerText = 'Test Driven Development'
+
+const aws = document.createElement('li')
+aws.innerText = 'Amazon Web Services'
+
+devops.append(tests, aws)
