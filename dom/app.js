@@ -59,3 +59,23 @@ const aws = document.createElement('li')
 aws.innerText = 'Amazon Web Services'
 
 devops.append(tests, aws)
+
+// Version Jihane
+const langages = document.querySelector('#langages')
+const listLang = document.createElement('h3')
+listLang.innerText = 'Listes des Langages '
+//langages.appendChild(listLang);
+
+const listOrdonnee = document.createElement('ol')
+//langages.appendChild(listOrdonnee);
+langages.append(listLang, listOrdonnee)
+const langageC = document.createElement('li')
+langageC.innerText = 'C'
+
+const langageCPlusPlus = document.createElement('li')
+langageCPlusPlus.innerText = 'C++'
+
+const langageGo = document.createElement('li')
+langageGo.innerText = 'go'
+
+listOrdonnee.append(langageC, langageCPlusPlus, langageGo)
