@@ -30,9 +30,7 @@ for (let i = 0; i < contacts.length; i++) {
         localStorage.setItem('contacts', JSON.stringify(contacts))
         window.location = './page2.html'
 
-        deleteButton.parentElement.parentElement.parentElement.removeChild(
-            deleteButton.parentElement.parentElement
-        )
+        deleteButton.parentElement.parentElement.remove()
     })
 
     tr.append(tdID, tdNom, tdPrenom, tdAge, tdDelete)
