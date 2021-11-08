@@ -7,6 +7,14 @@ class Personne {
     private boolean estMarie;
     private int nombreEnfants;
 
+    public Personne(String nom, String prenom, String pays, boolean estMarie, int nombreEnfants) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.pays = pays;
+        this.estMarie = estMarie;
+        this.nombreEnfants = nombreEnfants;
+    }
+
     public String getNom(){
         return nom;
     }
@@ -55,17 +63,19 @@ class Personne {
 
 class Main{
     public static void main(String[] args) {
-        Personne moi=new Personne();
-        Personne lui=new Personne();
-        lui.setNom("Jean");
-        moi.setNom("Lisangola");
-        moi.setPrenom("Christian");
-        moi.setPays("Citoyen du Monde");
-        moi.setEstMarie(false);
-        moi.setNombreEnfants(0);
+        Personne moi=new Personne("Lisangola","Christian","Gondwana",false,28);
+        Personne lui=new Personne("Bossard","Benjamin","Rep.Tcheque",false,2);
+//        Personne lui=new Personne();
+//        lui.setNom("jean");
+//        moi.setNom("lisangola");
+//        moi.setPrenom("Christian");
+//        moi.setPays("Citoyen du Monde");
+//        moi.setEstMarie(false);
+//        moi.setNombreEnfants(0);
+        moi.setNom("Bondjali");
         System.out.println("Nom : "+moi.getNom());
         System.out.println("Prenom : "+moi.getPrenom());
-        System.out.println("Nom complet : "+moi.nomComplet());
+        System.out.println("Nom complet : "+moi.nomComplet());//Christian LISANGOLA
         System.out.println("Pays : "+moi.getPays());
         System.out.println("Est married : "+(moi.estMarie()?"Oui":"Non"));
         System.out.println("Enfants : "+moi.getNombreEnfants());
