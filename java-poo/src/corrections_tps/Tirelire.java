@@ -1,14 +1,57 @@
+package corrections_tps;
+
 import java.util.Scanner;
 
-/*******************************************
- * Completez le programme a partir d'ici.
- *******************************************/
+class Tirelire{
+    private double montant;
 
+    public double getMontant(){
+        return montant;
+    }
 
-/*******************************************
- * Ne rien modifier apres cette ligne.
- *******************************************/
-public class TestTirelire {
+    public void afficher(){
+        if (montant > 0){
+            System.out.println("Vous avez : " + montant + " euros dans votre tirelire.");
+        }
+        else{
+            System.out.println("Vous etes sans le sou.");
+        }
+    }
+
+    public void secouer(){
+        if (montant > 0){
+            System.out.println("Bing bing");
+        }
+    }
+
+    public void remplir(double montant){
+        if (montant >= 0){
+            this.montant = montant;
+        }
+    }
+
+    public void vider() {
+        montant = 0;
+    }
+
+    public void puiser(double montantExige){
+        if (montantExige > 0){
+            montant -= montantExige;
+            montant = montant > 0 ? montant : 0;
+        }
+    }
+
+    public double calculerSolde(double budget){
+        if (budget > 0){
+            return montant - budget;
+        }
+        else{
+            return montant;
+        }
+    }
+}
+
+class TestTirelire {
 
     public static void main(String[] args) {
         Tirelire piggy = new Tirelire();
@@ -31,14 +74,14 @@ public class TestTirelire {
 
         System.out.println();
 
-        // le budget de vos vacances de rÃªves.
+        // le budget de vos vacances de rêves.
         double budget;
         Scanner clavier = new Scanner(System.in);
 
         System.out.println("Donnez le budget de vos vacances : ");
         budget = clavier.nextDouble();
 
-        // ce qui resterait dans la tirelire aprÃ¨s les
+        // ce qui resterait dans la tirelire après les
         // vacances
         double solde = piggy.calculerSolde(budget);
 
